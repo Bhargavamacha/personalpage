@@ -7,17 +7,13 @@ export default function Contact() {
         <div>
             <Grid container spacing={4}>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <TextField InputProps={{
-            classes: {
-                fontFamily: 'Source Code Pro',
-            },
-          }} id="filled-basic" label="Name" variant="filled" style={{width:window.innerWidth/5, fontFamily:'Source Code Pro'}} />
+                    <TextField id="filled-basic" label="Name" variant="filled" style={{width:window.innerWidth>600?window.innerWidth/5:300}} />
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <TextField inputMode={"email"} id="filled-basic" label="E-Mail" variant="filled" style={{width:window.innerWidth/5}} />
+                    <TextField inputMode={"email"} id="filled-basic" label="E-Mail" variant="filled" style={{width:window.innerWidth>600?window.innerWidth/5:300}} />
                 </Grid>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                    <TextField rows={10} id="filled-basic" multiline label="Message" variant="filled" style={{width:window.innerWidth/2}} />
+                    <TextField rows={10} id="filled-basic" multiline label="Message" variant="filled" style={{width:window.innerWidth>600?window.innerWidth/2:300}} />
                 </Grid>
             </Grid>
             <Button style={{ backgroundColor: 'black', marginTop: 20, fontFamily: 'Source Code Pro', color:'white' }}>SEND MESSAGE</Button>
