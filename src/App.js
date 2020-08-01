@@ -83,7 +83,7 @@ function App() {
             {/* <div ref={contact} style={{ backgroundColor: '#d58cff', color: 'black', marginBottom: -40 }}>
               <div style={{ marginLeft: 40 }}>
                 <br />
-                <p style={{ marginTop: 0, fontSize: 30 }}>CONTACT MEeee</p>
+                <p style={{ marginTop: 0, fontSize: 30 }}>CONTACT ME</p>
                 <Contact />
                 <br />
                 <br />
