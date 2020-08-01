@@ -46,7 +46,7 @@ function App() {
             <div style={{ backgroundColor: 'lightgreen', color: 'black', }}>
               <div style={{ marginLeft: 40 }}>
                 <br />
-                <p style={{ marginTop: 0, fontSize: 30 }}>SKILLS FINAL</p>
+                <p style={{ marginTop: 0, fontSize: 30 }}>SKILLS NGINX CHECK</p>
                 <Skills />
               </div>
             </div>
