@@ -120,7 +120,7 @@ function Skills() {
                     <Box position="relative" display="inline-flex">
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
                             <CircularProgress variant="static" value={100} size={130} style={{ color: '#6dc981' }} />
-                            <CircularProgress bo variant="static" value={40} size={130} style={{ color: 'darkgreen', position: 'absolute' }} />
+                            <CircularProgress bo variant="static" value={80} size={130} style={{ color: 'darkgreen', position: 'absolute' }} />
                         </div>
                         <Box
                             top={0}
@@ -132,7 +132,7 @@ function Skills() {
                             alignItems="center"
                             justifyContent="center"
                         >
-                            <Typography style={{ fontFamily: 'Source Code Pro', textAlign: 'center', fontSize: 15 }} >C/C++</Typography>
+                            <Typography style={{ fontFamily: 'Source Code Pro', textAlign: 'center', fontSize: 15 }} >JAVASCRIPT</Typography>
 
                         </Box>
                     </Box>

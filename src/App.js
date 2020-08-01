@@ -10,6 +10,10 @@ import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 function App() {
+  const contact = React.createRef()
+  const scrollToBottom = () => {
+    contact.current.scrollIntoView({ behavior: 'smooth' })
+  }
   const theme = createMuiTheme({
     typography: {
       // Use the system font.
@@ -31,8 +35,8 @@ function App() {
             Pronouns: He/Him/His
             </p>
                 <p style={{ fontSize: 20 }}>Junior @ IIT Kharagpur.<br />	&#10084; Everything Tech, Everything Pop.<br /> Making tech work while catching up with Netflix.</p>
-                <Button style={{ backgroundColor: 'black', marginRight: 20, fontFamily: 'Source Code Pro', color: 'white' }}>Contact</Button>
-                <Button style={{ backgroundColor: 'black', color: 'white', fontFamily: 'Source Code Pro' }}>RESUME</Button>
+                {/* <Button onClick={scrollToBottom} style={{ backgroundColor: 'black', marginRight: 20, fontFamily: 'Source Code Pro', color: 'white' }}>Contact</Button> */}
+                <Button onClick={()=> window.open("https://resume.bhargavamacha.info", "_blank")} style={{ backgroundColor: 'black', color: 'white', fontFamily: 'Source Code Pro' }}>RESUME</Button>
                 <p style={{ fontSize: 22 }}>Let's get connected!</p>
                 <SocialIcon onMouseEnter={() => setselect('twitter')} onMouseLeave={() => setselect('none')} url="http://twitter.com/machabhargava" style={{ marginRight: 15, height: 35, width: 35, opacity: select === 'twitter' ? 1 : select === 'none' ? 1 : 0.2 }} />
                 <SocialIcon onMouseEnter={() => setselect('insta')} onMouseLeave={() => setselect('none')} url="https://www.instagram.com/bhargava_macha/" style={{ marginRight: 15, height: 35, width: 35, opacity: select === 'insta' ? 1 : select === 'none' ? 1 : 0.2 }} />
@@ -46,7 +50,7 @@ function App() {
             <div style={{ backgroundColor: 'lightgreen', color: 'black', }}>
               <div style={{ marginLeft: 40 }}>
                 <br />
-                <p style={{ marginTop: 0, fontSize: 30 }}>SKILLS NGINX CHECK</p>
+                <p style={{ marginTop: 0, fontSize: 30 }}>SKILLS</p>
                 <Skills />
               </div>
             </div>
@@ -66,7 +70,7 @@ function App() {
                 <br />
               </div>
             </div>
-            <div style={{ backgroundColor: '#fed8b1', color: 'black', }}>
+            <div style={{ backgroundColor: '#fed8b1', color: 'black', marginBottom: -40 }}>
               <div style={{ marginLeft: 40 }}>
                 <br />
                 <p style={{ marginTop: 0, fontSize: 30 }}>CERTIFICATIONS</p>
@@ -75,7 +79,7 @@ function App() {
                 <br />
               </div>
             </div>
-            <div style={{ backgroundColor: '#d58cff', color: 'black', marginBottom: -40 }}>
+            {/* <div ref={contact} style={{ backgroundColor: '#d58cff', color: 'black', marginBottom: -40 }}>
               <div style={{ marginLeft: 40 }}>
                 <br />
                 <p style={{ marginTop: 0, fontSize: 30 }}>CONTACT ME</p>
@@ -83,7 +87,7 @@ function App() {
                 <br />
                 <br />
               </div>
-            </div>
+            </div> */}
           </Grid>
         </Grid>
       </ThemeProvider>

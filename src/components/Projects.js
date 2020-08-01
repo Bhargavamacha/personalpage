@@ -25,6 +25,15 @@ export default function Projects() {
     const handleClose = () => {
         setOpen(false);
     };
+    const [open3, setOpen3] = React.useState(false);
+
+    const handleClickOpen3 = () => {
+        setOpen3(true);
+    };
+
+    const handleClose3 = () => {
+        setOpen3(false);
+    };
 
     return (
         <Grid container spacing={4}>
@@ -41,7 +50,7 @@ export default function Projects() {
                         An integrated approach to information, SocialEGG lets you find news and videos alike, so it's a one-stop solution for all your news needs. Swipe your way through the ocean of information, with your preferences being learned with every swipe.
                         </Typography>
             <Button onClick={()=> window.open("http://app.socialegg.in", "_blank")} style={{ backgroundColor: 'black', marginRight: 20, marginTop:10,fontFamily:'Source Code Pro', color:'white' }}>Download App</Button>
-            <Button onClick={handleClose} style={{ backgroundColor: 'black', marginRight: 20, marginTop:10,fontFamily:'Source Code Pro', color:'white' }}>Learn more</Button>
+            <Button onClick={handleClickOpen} style={{ backgroundColor: 'black', marginRight: 20, marginTop:10,fontFamily:'Source Code Pro', color:'white' }}>Learn more</Button>
                     </CardContent>
                 </Card>
                 <Dialog
@@ -78,7 +87,7 @@ export default function Projects() {
                         <Typography style={{color:'black', fontSize:14,marginTop:5, fontFamily:'Source Code Pro'}}>
                         Get periodic/real-time notifications comprising all the news articles mentioning the topics you care about.                        </Typography>
             <Button onClick={()=> window.open("https://socialegg.in", "_blank")} style={{ backgroundColor: 'black', marginRight: 20, marginTop:10,fontFamily:'Source Code Pro', color:'white' }}>Go to App</Button>
-            <Button onClick={handleClose} style={{ backgroundColor: 'black', marginRight: 20, marginTop:10,fontFamily:'Source Code Pro', color:'white' }}>Learn more</Button>
+            <Button onClick={handleClickOpen} style={{ backgroundColor: 'black', marginRight: 20, marginTop:10,fontFamily:'Source Code Pro', color:'white' }}>Learn more</Button>
                     </CardContent>
                 </Card>
                 <Dialog
@@ -98,6 +107,45 @@ export default function Projects() {
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleClose} color="primary">
+                            CLOSE
+          </Button>
+                    </DialogActions>
+                </Dialog>
+            </Grid>
+            <Grid item xs={11} sm={11} md={5} lg={5}>
+                <Card elevation={10} style={{backgroundColor:'lightgrey'}}>
+                    <CardContent>
+                        <Typography style={{fontFamily:'Source Code Pro', color:'black', fontSize:12}}>
+                            CLOUD ARCHITECTURE + DEVOPS + WEB DEV
+                        </Typography>
+                        <Typography style={{fontFamily:'Source Code Pro', color:'black', fontWeight:'bold'}} variant="h5" component="h2">
+                            Portfolio Web App
+                            </Typography>
+                        <Typography style={{color:'black', fontSize:14,marginTop:5, fontFamily:'Source Code Pro'}}>
+                       My Personal Web Page                      </Typography>
+            <Button onClick={handleClickOpen3} style={{ backgroundColor: 'black', marginRight: 20, marginTop:10,fontFamily:'Source Code Pro', color:'white' }}>Learn more</Button>
+                    </CardContent>
+                </Card>
+                <Dialog
+                    open={open3}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleClose3}
+                    aria-labelledby="alert-dialog-slide-title"
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogTitle id="alert-dialog-slide-title">{"My Portfolio"}</DialogTitle>
+                    <DialogContent>
+                        <b>Stack:</b><br />
+                        - NGINX<br />
+                        - Github Web Hooks<br />
+                        - GCP - Google Compute Engine<br />
+                        - AWS Route 53 <br />
+                        - Bash Scripting
+                        - ReactJS & Node.JS
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleClose3} color="primary">
                             CLOSE
           </Button>
                     </DialogActions>
