@@ -23,7 +23,7 @@ function App() {
   })
   const [select, setselect] = useState('none')
   return (
-    <div className="App">
+    <div className="App" style={{overflow:'hidden'}}>
       <ThemeProvider theme={theme}>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={5} >
@@ -48,7 +48,7 @@ function App() {
             </div>
           </Grid>
           <Grid item xs={12} sm={7}>
-            <div style={{ backgroundColor: 'lightgreen', color: 'black', }}>
+            <div style={{ backgroundColor: 'lightgreen', color: 'black' }}>
               <div style={{ marginLeft: 40 }}>
                 <br />
                 <p style={{ marginTop: 0, fontSize: 30 }}>SKILLS</p>
@@ -71,7 +71,7 @@ function App() {
                 <br />
               </div>
             </div>
-            <div style={{ backgroundColor: '#fed8b1', color: 'black', marginBottom: -40 }}>
+            <div style={{ backgroundColor: '#fed8b1', color: 'black', marginBottom: -20 }}>
               <div style={{ marginLeft: 40 }}>
                 <br />
                 <p style={{ marginTop: 0, fontSize: 30 }}>CERTIFICATIONS</p>
