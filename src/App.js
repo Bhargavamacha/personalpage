@@ -12,7 +12,7 @@ import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/sty
 function App() {
   const contact = React.createRef()
   const scrollToBottom = () => {
-    contact.current.scrollIntoView({ behavior: 'smooth' })
+    contact.current.scrollIntoView({ behavior: 'smooth'})
   }
   const theme = createMuiTheme({
     typography: {
