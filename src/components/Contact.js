@@ -16,7 +16,7 @@ export default function Contact() {
                     <TextField rows={10} id="filled-basic" multiline label="Message" variant="filled" style={{width:window.innerWidth>600?window.innerWidth/2:300}} />
                 </Grid>
             </Grid>
-            <Button style={{ backgroundColor: 'black', marginTop: 20, fontFamily: 'Source Code Pro', color:'white' }}>SEND MESSAGE</Button>
+            <Button style={{ backgroundColor: 'black', marginTop: 20, fontFamily: 'Source Code Pro', color:'white' }}>SEND MESSAGE </Button>
         </div>
     );
 }
